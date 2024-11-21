@@ -177,13 +177,9 @@ const deleteStudent = (studentId) => {
 
                                                 <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
 
-                                                    <div class='has-tooltip'> 
-                                                        <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-red-500 -mt-8">Click here to Edit the Student details</span>
-                                                        <Link :href="route('students.edit', student.id)" class="text-indigo-600 hover:text-indigo-900 "> Edit </Link>
-                                                        
-                                                    </div>
+                                                  
 
-                                                    
+                                                    <Link :href="route('students.edit', student.id)" class="text-indigo-600 hover:text-indigo-900 "> Edit </Link>
 
                                                     <button @click="deleteStudent(student.id)" class="ml-2 text-indigo-600 hover:text-indigo-900"> Delete </button>
                                                 </td>
