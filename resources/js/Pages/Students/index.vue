@@ -5,6 +5,7 @@ import { Link, usePage, Head, useForm, router } from "@inertiajs/vue3";
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { ref, computed, watch } from "vue";
 
+
 defineProps({
     students: {
         type: Object,
@@ -14,10 +15,10 @@ defineProps({
 });
 
 
-let search = ref(usePage().props.search), 
-pageNumber = ref(1);
+let search = ref(usePage().props.search),
+    pageNumber = ref(1);
 let studentsUrl = computed(() => {
-    let url = new URL (route("students.index"));
+    let url = new URL(route("students.index"));
     url.searchParams.append("page", pageNumber.value);
     if (search.value) {
         url.searchParams.append("search", search.value);
@@ -27,7 +28,7 @@ let studentsUrl = computed(() => {
 );
 
 const updatedPageNumber = (link) => {
-   
+
     pageNumber.value = link.url.split("=")[1];
 };
 
@@ -40,16 +41,16 @@ watch(
             replace: true,
         });
     }
-); 
+);
 
 watch(
     () => search.value,
     (value) => {
         if (value) {
-            pageNumber.value=1;
+            pageNumber.value = 1;
         }
     }
-); 
+);
 
 
 
@@ -60,11 +61,12 @@ const deleteForm = useForm({});
 const deleteStudent = (studentId) => {
 
     if (confirm("Are you sure you want to Delete this student?")) {
-        
+
         deleteForm.delete(route('students.destroy', studentId));
 
     }
 };
+
 
 </script>
 
@@ -107,7 +109,8 @@ const deleteStudent = (studentId) => {
                                 class="absolute pl-2 left-0 top-0 bottom-0 flex items-center pointer-events-none text-gray-500">
                                 <MagnifyingGlass />
                             </div>
-                            <input v-model="search" type="text" autocomplete="off" placeholder="Search Students ..." id="search"
+                            <input v-model="search" type="text" autocomplete="off" placeholder="Search Students ..."
+                                id="search"
                                 class="block rounded-lg border-0 py-2 pl-10 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                         </div>
                     </div>
@@ -171,21 +174,28 @@ const deleteStudent = (studentId) => {
                                                     {{ student.created_at }}
                                                 </td>
 
-                                                <td
-                                                    class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                                                    <Link :href="route('students.edit', student.id)"
-                                                        class="text-indigo-600 hover:text-indigo-900">
-                                                    Edit
-                                                    </Link>
-                                                    <button @click="deleteStudent(student.id)"
-                                                        class="ml-2 text-indigo-600 hover:text-indigo-900">
-                                                        Delete
-                                                    </button>
+
+                                                <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+
+                                                    <div class='has-tooltip'> 
+                                                        <span class="tooltip rounded shadow-lg p-1 bg-gray-100 text-red-500 -mt-8">Click here to Edit the Student details</span>
+                                                        <Link :href="route('students.edit', student.id)" class="text-indigo-600 hover:text-indigo-900 "> Edit </Link>
+                                                        
+                                                    </div>
+
+                                                    
+
+                                                    <button @click="deleteStudent(student.id)" class="ml-2 text-indigo-600 hover:text-indigo-900"> Delete </button>
                                                 </td>
+
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
+                                </div><br>
+
+                                
+
+
                                 <Pagination :data="students" :updatedPageNumber="updatedPageNumber" />
                             </div>
                         </div>
@@ -194,6 +204,8 @@ const deleteStudent = (studentId) => {
             </div>
         </div>
 
-    </AuthenticatedLayout>
 
+
+    </AuthenticatedLayout>
+    
 </template>
