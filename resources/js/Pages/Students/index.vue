@@ -147,7 +147,9 @@ const deleteStudent = (studentId) => {
                                                     class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                                                     Created At
                                                 </th>
-                                                <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6"></th>
+                                                <th scope="col"
+                                                    class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                                    Actions</th>
 
                                             </tr>
                                         </thead>
@@ -175,13 +177,17 @@ const deleteStudent = (studentId) => {
                                                 </td>
 
 
-                                                <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                                <td
+                                                    class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">
 
-                                                  
 
-                                                    <Link :href="route('students.edit', student.id)" class="text-indigo-600 hover:text-indigo-900 "> Edit </Link>
 
-                                                    <button @click="deleteStudent(student.id)" class="ml-2 text-indigo-600 hover:text-indigo-900"> Delete </button>
+                                                    <Link :href="route('students.edit', student.id)"
+                                                        class="text-indigo-600 hover:text-red-500"> Edit </Link>
+
+                                                    <button @click="deleteStudent(student.id)"
+                                                        class="ml-2 text-indigo-600 hover:text-indigo-900"> Delete
+                                                    </button>
                                                 </td>
 
                                             </tr>
@@ -189,7 +195,7 @@ const deleteStudent = (studentId) => {
                                     </table>
                                 </div><br>
 
-                                
+
 
 
                                 <Pagination :data="students" :updatedPageNumber="updatedPageNumber" />
@@ -203,5 +209,5 @@ const deleteStudent = (studentId) => {
 
 
     </AuthenticatedLayout>
-    
+
 </template>
