@@ -4,6 +4,7 @@ import Pagination from "@/Components/Pagination.vue";
 import { Link, usePage, Head, useForm, router } from "@inertiajs/vue3";
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { ref, computed, watch } from "vue";
+import { useToast } from 'vue-toastification';
 
 
 defineProps({
@@ -51,7 +52,7 @@ watch(
         }
     }
 );
-
+const toast = useToast();
 
 
 console.log(usePage().props.students);
@@ -61,11 +62,12 @@ const deleteForm = useForm({});
 const deleteStudent = (studentId) => {
 
     if (confirm("Are you sure you want to Delete this student?")) {
-
+        toast.success('Student Deleted Successfully');
         deleteForm.delete(route('students.destroy', studentId));
-
+        
     }
 };
+
 
 
 </script>
