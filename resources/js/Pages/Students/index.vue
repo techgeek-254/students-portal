@@ -66,6 +66,7 @@ const deleteStudent = (studentId) => {
         deleteForm.delete(route('students.destroy', studentId));
         
     }
+
 };
 
 

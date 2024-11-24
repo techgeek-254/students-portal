@@ -4,6 +4,8 @@ import { Head, Link, useForm, usePage } from '@inertiajs/vue3';
 import { watch, ref, onMounted } from 'vue';
 import axios from 'axios';
 import InputError from '@/Components/InputError.vue';
+import { useToast } from 'vue-toastification';
+
 
 defineProps({
     classes: {
@@ -43,8 +45,12 @@ const getSections = (classId) => {
     })
 };
 
+const toast = useToast();
+
 const updateStudent = () => {
+    
     form.put(route("students.update", student.id));
+    toast.success('Student Updated Successfully');
 };
 
 </script>
