@@ -4,6 +4,8 @@ import { Head, useForm, Link } from '@inertiajs/vue3';
 import { watch, ref } from 'vue';
 import axios from 'axios';
 import InputError from '@/Components/InputError.vue';
+import { useToast } from 'vue-toastification';
+
 
 defineProps({
     classes: {
@@ -31,9 +33,11 @@ const getSections = (classId) => {
         sections.value = response.data;
     })
 };
+const toast = useToast();
 
 const createStudent = () => {
     form.post(route("students.store"));
+    toast.success('Student Created Successfully');
 };
 
 </script>
