@@ -53,7 +53,7 @@ defineProps({
                                 :disabled="link.active || !link.url"
                                     class="relative inline-flex items-center px-4 py-2 border text-sm font-medium"
                                     :class="{
-                                        'z-10 bg-indigo-50 border-indigo-500 text-indigo-600': link.active,
+                                        'z-10 bg-purple-50 border-purple-500 text-purple-600': link.active,
                                         'bg-white border-gray-300 text-gray-500 hover:bg-gray-50': !link.active,
                                     }">
                                     <span v-html="link.label"> </span>
