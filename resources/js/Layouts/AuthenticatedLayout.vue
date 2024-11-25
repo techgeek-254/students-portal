@@ -13,8 +13,8 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     <div>
-        <div class="min-h-screen bg-gray-100">
-            <nav class="border-b border-gray-100 bg-gradient-to-r from-purple-100 to-pink-100">
+        <div class="min-h-screen bg-gradient-to-r from-purple-950 via-purple-950 to-purple-950 ... ">
+            <nav class="border-b border-purple-900 bg-gradient-to-r from-purple-950 via-purple-950 to-purple-950 ... ">
                 <!-- Primary Navigation Menu -->
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div class="flex h-16 justify-between">
@@ -22,12 +22,12 @@ const showingNavigationDropdown = ref(false);
                             <!-- Logo -->
                             <div class="flex shrink-0 items-center">
                                 <Link :href="route('dashboard')">
-                                <ApplicationLogo class="block h-9 w-auto fill-current text-gray-800" />
+                                <ApplicationLogo class="block h-9 w-auto fill-current text-white" />
                                 </Link>
                             </div>
 
                             <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex ">
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex pb-2">
                                 <NavLink :href="route('dashboard')" 
                                             :active="route().current('dashboard')">
                                     Dashboard
@@ -55,7 +55,7 @@ const showingNavigationDropdown = ref(false);
                                     <template #trigger>
                                         <span class="inline-flex rounded-md">
                                             <button type="button"
-                                                class="inline-flex items-center rounded-md border border-transparent bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none">
+                                                class="inline-flex items-center rounded-md border border-purple-900 bg-purple-950 px-3 py-2 text-sm font-medium leading-4 text-gray-400 transition duration-150 ease-in-out hover:text-gray-300 focus:outline-none">
                                                 {{ $page.props.auth.user.name }}
 
                                                 <svg class="-me-0.5 ms-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -69,10 +69,10 @@ const showingNavigationDropdown = ref(false);
                                     </template>
 
                                     <template #content>
-                                        <DropdownLink :href="route('profile.edit')">
+                                        <DropdownLink :href="route('profile.edit')" class="hover:text-purple-950 hover:border-l-4 border-red-500 ...">
                                             Profile
                                         </DropdownLink>
-                                        <DropdownLink :href="route('logout')" method="post" as="button">
+                                        <DropdownLink :href="route('logout')" method="post" as="button" class="hover:text-purple-950 hover:border-l-4 border-red-500 ...">
                                             Log Out
                                         </DropdownLink>
                                     </template>

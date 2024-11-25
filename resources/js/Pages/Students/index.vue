@@ -62,8 +62,9 @@ const deleteForm = useForm({});
 const deleteStudent = (studentId) => {
 
     if (confirm("Are you sure you want to Delete this student?")) {
-        toast.success('Student Deleted Successfully');
+        
         deleteForm.delete(route('students.destroy', studentId));
+        toast.success('Student Deleted Successfully');
         
     }
 
@@ -100,7 +101,7 @@ const deleteStudent = (studentId) => {
 
                         <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
                             <Link :href="route('students.create')"
-                                class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
+                                class="inline-flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-800 to-fuchsia-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-900 focus:ring-offset-2 sm:w-auto">
                             Add Student
                             </Link>
                         </div>
@@ -112,9 +113,9 @@ const deleteStudent = (studentId) => {
                                 class="absolute pl-2 left-0 top-0 bottom-0 flex items-center pointer-events-none text-gray-500">
                                 <MagnifyingGlass />
                             </div>
-                            <input v-model="search" type="text" autocomplete="off" placeholder="Search Students ..."
+                            <input v-model="search" type="text" autocomplete="off" placeholder="Search Students"
                                 id="search"
-                                class="block rounded-lg border-0 py-2 pl-10 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                                class="block rounded-lg border-0 py-2 pl-10 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6" />
                         </div>
                     </div>
 
@@ -186,10 +187,10 @@ const deleteStudent = (studentId) => {
 
 
                                                     <Link :href="route('students.edit', student.id)"
-                                                        class="text-indigo-600 hover:text-red-500 hover:font-semibold"> Edit </Link>
+                                                        class="text-purple-950 hover:text-red-500 hover:font-semibold"> Edit </Link>
 
                                                     <button @click="deleteStudent(student.id)"
-                                                        class="ml-5 text-indigo-600 hover:text-red-500 hover:font-semibold"> Delete
+                                                        class="ml-5 text-purple-950 hover:text-red-500 hover:font-semibold"> Delete
                                                     </button>
                                                 </td>
 
