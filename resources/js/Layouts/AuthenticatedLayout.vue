@@ -41,9 +41,9 @@ const showingNavigationDropdown = ref(false);
                                     Create Student
                                 </NavLink>
 
-                                <NavLink >
-                                    Contacts
-                                </NavLink>
+                                <NavLink>Contacts
+                                
+                            </NavLink>
 
                             </div>
                         </div>
