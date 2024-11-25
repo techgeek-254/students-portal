@@ -15,7 +15,7 @@
                         <br>
                         <div class="pi pi-inbox" style="font-size: 15px; vertical-align:middle;"></div>  Email Addr: test@example.com
                         <br>
-                        <div class="pi pi-link" style="font-size: 15px; vertical-align:middle;"></div>   Website:    www.students-school.aca
+                        <div class="pi pi-link" style="font-size: 15px; vertical-align:middle;"></div>   Website:   <a href="https://www.google.com" @click="showAlert" target="_blank">www.students-school.aca</a> 
                         <br>
                         <div class="pi pi-twitter" style="font-size: 15px; vertical-align:middle;"></div>  Formerly twitter | <div class="pi pi-facebook" style="font-size: 15px; vertical-align:middle;"></div> Facebook
                     </p>
@@ -91,7 +91,14 @@
 
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-
 import 'primeicons/primeicons.css'
+
+const showAlert = (event) => {
+    event.preventDefault();
+    if (confirm('You are opening an external link, are you sure you want to proceed?')){
+        window.open('https://www.google.com', '_blank');
+    }
+};
+
 
 </script>
