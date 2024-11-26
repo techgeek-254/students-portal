@@ -1,8 +1,5 @@
 <template>
-<Head>
-        <title>Our Contacts</title>
-        <link rel="icon" type="image/x-icon" href="/public/images/logo.svg"/>
-    </Head>
+
 
     <AuthenticatedLayout>
         <div class="p-20 bg-gradient-to-r from-slate-950 via-black to-slate-950 ... ">
@@ -192,8 +189,6 @@ const showAlert = (event) => {
         window.open('https://www.google.com', '_blank');
     }
 };
-
-
 </script>
 
 <style scoped>

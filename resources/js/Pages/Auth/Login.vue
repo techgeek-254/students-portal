@@ -28,6 +28,15 @@ const submit = () => {
         onFinish: () => form.reset('password'),
     });
 };
+
+var link = document.querySelector("link[rel~='icon']");
+if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.head.appendChild(link);
+}
+link.href = 'https://stackoverflow.com/favicon.ico';
+
 </script>
 
 <template>
@@ -70,14 +79,14 @@ const submit = () => {
                 </div>
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
-            <!--
+            
             <div class="mt-4 block">
                 <label class="flex items-center">
                     <Checkbox name="remember" v-model:checked="form.remember" />
                     <span class="ms-2 text-sm text-gray-600">Remember me</span>
                 </label>
             </div>
--->
+
             <div class="mt-4 flex items-center justify-end">
                 <Link v-if="canResetPassword" :href="route('password.request')"
                     class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
