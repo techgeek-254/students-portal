@@ -12,7 +12,7 @@ import 'vue-toastification/dist/index.css';
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 createInertiaApp({
-    title: (title) => `${title}`,
+    title: (title) => `${title} - Students System`,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.vue`,
