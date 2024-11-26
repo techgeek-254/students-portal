@@ -77,7 +77,10 @@ const deleteStudent = (studentId) => {
 
 <template>
 
-    <Head title="Students List" />
+    <Head>
+        <title>Students List</title>
+        <link rel="shortcut icon" type="image/png" href="/public/icon.ico"/>
+    </Head>
 
     <AuthenticatedLayout>
         <template #header>
