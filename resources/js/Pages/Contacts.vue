@@ -1,8 +1,8 @@
 <template>
 
     <AuthenticatedLayout>
-        <div class="p-20 bg-gradient-to-r from-purple-950 via-purple-950 to-purple-950 ... ">
-            <h1 class="text-white text-8xl text-center pt-15 font-bold pb-10">Our Locations <div class="pi pi-map-marker" style="font-size: 20px; vertical-align: top;"></div></h1>
+        <div class="p-20 bg-gradient-to-r from-slate-950 via-black to-slate-950 ... ">
+            <h1 id="contactsTitle" class="text-8xl text-center pt-15 font-bold pb-10">Our Locations <div class="pi pi-map-marker" style="font-size: 20px; vertical-align: top;"></div></h1>
             <div class="grid grid-rows-4 grid-flow-col gap-4">
                 <div
                     class="rounded border border-white text-white  opacity-50 hover:opacity-100 hover:cursor-grab max-w-96 hover:border-orange-300">
@@ -190,3 +190,12 @@ const showAlert = (event) => {
 
 
 </script>
+
+<style scoped>
+#contactsTitle{
+    background: linear-gradient(rgb(153, 0, 255), rgb(212, 125, 255));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+</style>

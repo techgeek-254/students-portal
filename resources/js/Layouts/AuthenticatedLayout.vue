@@ -13,7 +13,7 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     <div>
-        <div class="min-h-screen bg-gradient-to-r from-purple-950 via-purple-950 to-purple-950 ... ">
+        <div class="min-h-screen bg-gradient-to-r from-slate-300 via-purple-100 to-slate-400 ... ">
             <nav class="border-b border-purple-900 bg-gradient-to-r from-purple-950 via-purple-950 to-purple-950 ... ">
                 <!-- Primary Navigation Menu -->
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -41,9 +41,11 @@ const showingNavigationDropdown = ref(false);
                                     Create Student
                                 </NavLink>
 
-                                <NavLink>Contacts
+                                <a href="http://students-portal.test/contacts" class="px-1 border-transparent font-medium  
+                                text-white hover:text-white hover:border-white focus:outline-none focus:text-white focus:border-white transition duration-150 ease-in-out 
+                                inline-flex items-center pt-1 border-b-2  text-sm  leading-5">Contacts</a>
                                 
-                            </NavLink>
+                            
 
                             </div>
                         </div>
