@@ -91,7 +91,7 @@ const submit = () => {
                 <a href="http://students-portal.test/register">
                     <div
                         class="ms-4 inline-flex items-center rounded-md border border-solid border-purple-700 bg-white 
-        px-4 py-2 text-xs font-semibold uppercase tracking-widest text-purple-800 transition duration-150 ease-in-out hover:bg-purple-50 
+        px-4 py-2 text-xs font-semibold uppercase tracking-widest text-gray-400 hover:text-purple-800 transition duration-150 ease-in-out hover:bg-purple-50 
         focus:bg-purple-100 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 active:bg-purple-100 ">
                         Register
                     </div>

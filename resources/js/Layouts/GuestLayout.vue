@@ -8,6 +8,11 @@ import { Link } from '@inertiajs/vue3';
         class="flex min-h-screen flex-col items-center bg-purple-100 pt-6 sm:justify-center sm:pt-0"
     >
         <div>
+            <a href="/">
+                <img src="/resources/img/logo.svg" alt="loginPage_logo">
+            </a>
+
+
             <Link href="/">
                 <ApplicationLogo class="h-20 w-20 fill-current text-gray-500" />
             </Link>
