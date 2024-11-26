@@ -46,25 +46,26 @@ const submit = () => {
                 <InputLabel for="email" value="Email" />
 
                 <div class="flex">
-
-                    <div class="pi pi-inbox flex-none w-9 content-center " style="font-size: 30px; color: gainsboro;"></div>
+                    <div class="pi pi-inbox flex-none w-9 content-center text-slate-400	 " style="font-size: 20px;"></div>
                     <div class="flex-1">
                         <TextInput id="email" type="email" class="mt-1 block w-full" v-model="form.email" required
                             autofocus autocomplete="username" />
                     </div>
                 </div>
-
                     <InputError class="mt-2" :message="form.errors.email" />
-
-
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password" value="Password" />
-                <div class="pi pi-key" style="font-size: 15px; vertical-align:middle; color: gray;"></div>
-                <TextInput id="password" type="password" class="mt-1 block w-full" v-model="form.password" required
-                    autocomplete="current-password" />
 
+                <InputLabel for="password" value="Password" />
+
+                <div class="flex">
+                <div class="pi pi-key flex-none w-9 content-center text-slate-400 " style="font-size: 20px;"></div>
+                <div class="flex-1">
+                <TextInput id="password" type="password" class="mt-1 block w-full" v-model="form.password" required
+                    autocomplete="current-password"/>
+</div>
+</div>
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
