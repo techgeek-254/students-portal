@@ -79,17 +79,17 @@ const deleteStudent = (studentId) => {
 
     <Head>
         <title>Students List</title>
-        <link rel="shortcut icon" type="image/png" href="/public/icon.ico"/>
+        
     </Head>
 
     <AuthenticatedLayout>
-        <template #header>
+        <template>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Students List
             </h2>
         </template>
 
-        <div class="bg-gray-100 py-10">
+        <div class="bg-gradient-to-r from-slate-300 via-purple-100 to-slate-400 ... py-10">
             <div class="mx-auto max-w-7xl">
                 <div class="px-4 sm:px-6 lg:px-8">
                     <div class="sm:flex sm:items-center">

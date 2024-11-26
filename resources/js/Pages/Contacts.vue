@@ -1,5 +1,5 @@
 <template>
-
+<Head title="Contacts" />
 
     <AuthenticatedLayout>
         <div class="p-20 bg-gradient-to-r from-slate-950 via-black to-slate-950 ... ">
