@@ -93,9 +93,7 @@ link.href = 'https://stackoverflow.com/favicon.ico';
                 Forgot password ?
                 </Link>
 
-                <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Log in
-                </PrimaryButton>
+                
 
                 <a href="http://students-portal.test/register">
                     <div
@@ -105,7 +103,9 @@ link.href = 'https://stackoverflow.com/favicon.ico';
                         Register
                     </div>
                 </a>
-
+                <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                    Log in
+                </PrimaryButton>
             </div>
         </form>
     </GuestLayout>
