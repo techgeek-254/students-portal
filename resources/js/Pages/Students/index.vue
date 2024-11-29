@@ -6,7 +6,6 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { ref, computed, watch } from "vue";
 import { useToast } from 'vue-toastification';
 
-
 defineProps({
     students: {
         type: Object,
@@ -216,5 +215,7 @@ const deleteStudent = (studentId) => {
 
 
     </AuthenticatedLayout>
+
+
 
 </template>
