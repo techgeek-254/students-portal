@@ -118,7 +118,7 @@ const deleteStudent = (studentId) => {
                         </div>
                     </div>
 
-                    <div class="flex flex-col justify-between sm:flex-row mt-6">
+                    <div class="flex flex-col justify-start sm:flex-row mt-6">
                         <div class="relative text-sm text-gray-800 col-span-3">
                             <div
                                 class="absolute pl-2 left-0 top-0 bottom-0 flex items-center pointer-events-none text-gray-500">
