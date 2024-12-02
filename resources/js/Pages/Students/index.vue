@@ -12,12 +12,17 @@ defineProps({
         required: true,
 
     },
+    classes: {
+        type: Object,
+        required: true,
+
+    },
 });
 
 const page = usePage();
 
 let search = ref(usePage().props.search),
-class_id = ref(""),
+    class_id = ref(usePage().props.class_id ?? ""),
     pageNumber = ref(1);
 
 let studentsUrl = computed(() => {
@@ -131,11 +136,13 @@ const deleteStudent = (studentId) => {
                         </div>
 
                         <select 
+                        v-model="class_id"
                         class="block rounded-lg border-0 py-2 ml-5 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400
                         sm:text-sm sm:leading-6"
                         >
                     <option value="">Filter by Class</option>
-                    <option>Class 1</option>
+                    <option :value="item.id" :key="item.id" v-for="item in classes.data">{{ item.name }}</option>
+                    
 
                     </select>
 
