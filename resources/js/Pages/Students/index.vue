@@ -126,8 +126,19 @@ const deleteStudent = (studentId) => {
                             </div>
                             <input v-model="search" type="text" autocomplete="off" placeholder="Search Students"
                                 id="search"
-                                class="block rounded-lg border-0 py-2 pl-10 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6" />
+                                class="block rounded-lg border-0 py-2 pl-10 text-gray-900 ring-1 ring-inset ring-gray-200 
+                                placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6" />
                         </div>
+
+                        <select 
+                        class="block rounded-lg border-0 py-2 ml-5 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400
+                        sm:text-sm sm:leading-6"
+                        >
+                    <option value="">Filter by Class</option>
+                    <option>Class 1</option>
+
+                    </select>
+
                     </div>
 
                     <div class="mt-8 flex flex-col">
