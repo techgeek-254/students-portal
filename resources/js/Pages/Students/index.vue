@@ -216,10 +216,10 @@ const deleteStudent = (studentId) => {
 
 
                                                     <Link :href="route('students.edit', student.id)"
-                                                        class="text-purple-950 hover:text-red-500 hover:font-semibold border border-purple-300 pl-2 pr-2 pt-1 pb-1 rounded"> Edit </Link>
+                                                        class="text-purple-950 hover:text-red-500 hover:font-semibold border border-purple-200 pl-2 pr-2 pt-1 pb-1 rounded hover:border-red-500"> Edit </Link>
 
                                                     <button @click="deleteStudent(student.id)"
-                                                        class="ml-5 text-purple-950 hover:text-red-500 hover:font-semibold"> Delete
+                                                        class="ml-5 text-purple-950 hover:text-red-500 hover:font-semibold border border-purple-200 pl-2 pr-2 pt-1 pb-1 rounded hover:border-red-500"> Delete
                                                     </button>
                                                 </td>
 
