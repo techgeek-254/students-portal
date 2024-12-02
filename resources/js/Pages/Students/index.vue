@@ -189,7 +189,7 @@ const deleteStudent = (studentId) => {
                                         <tbody class="divide-y divide-gray-200 bg-white">
                                             <tr v-for="student in students.data" :key="student.id">
                                                 <td
-                                                    class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
+                                                    class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 bg-gray-50">
                                                     {{ student.id }}
                                                 </td>
                                                 <td
@@ -219,7 +219,7 @@ const deleteStudent = (studentId) => {
                                                         class="text-purple-950 hover:text-red-500 hover:font-semibold border border-purple-200 pl-2 pr-2 pt-1 pb-1 rounded hover:border-red-500"> Edit </Link>
 
                                                     <button @click="deleteStudent(student.id)"
-                                                        class="ml-5 text-purple-950 hover:text-red-500 hover:font-semibold border border-purple-200 pl-2 pr-2 pt-1 pb-1 rounded hover:border-red-500"> Delete
+                                                        class="ml-5 text-purple-950 hover:text-white hover:font-semibold border border-purple-200 pl-2 pr-2 pt-1 pb-1 rounded hover:border-red-500 hover:bg-red-500"> Delete
                                                     </button>
                                                 </td>
 
