@@ -14,15 +14,24 @@ defineProps({
     },
 });
 
+const page = usePage();
 
 let search = ref(usePage().props.search),
+class_id = ref(""),
     pageNumber = ref(1);
+
 let studentsUrl = computed(() => {
     let url = new URL(route("students.index"));
     url.searchParams.append("page", pageNumber.value);
+
     if (search.value) {
         url.searchParams.append("search", search.value);
     }
+
+    if (class_id.value) {
+        url.searchParams.append("class_id", class_id.value);
+    }
+
     return url;
 }
 );
