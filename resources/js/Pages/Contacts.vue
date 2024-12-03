@@ -180,7 +180,7 @@
 
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import 'primeicons/primeicons.css'
+import 'primeicons/primeicons.css';
 import { Head} from "@inertiajs/vue3";
 
 const showAlert = (event) => {

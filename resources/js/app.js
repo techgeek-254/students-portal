@@ -7,8 +7,9 @@ import { createApp, h } from 'vue';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import Toast from 'vue-toastification';
 import 'vue-toastification/dist/index.css';
-
 import Dialog from 'primevue/dialog';
+import PrimeVue from "primevue/config";
+import "primeicons/primeicons.css";
 
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
