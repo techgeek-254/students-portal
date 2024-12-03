@@ -1,19 +1,7 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
-import { ref } from 'vue';
-import { Dialog, DialogTitle, DialogDescription } from '@headlessui/vue';
-
-const isOpen = ref(false);  // Reactive state for modal visibility
-
-// Functions to open and close the modal
-const openModal = () => {
-    isOpen.value = true;
-};
-
-const closeModal = () => {
-    isOpen.value = false;
-};
+import { XMarkIcon } from '@heroicons/vue/20/solid'
 
 
 </script>
@@ -22,6 +10,29 @@ const closeModal = () => {
 <template>
 
     <Head title="Dashboard" />
+
+<!-- Banner Starts here -->
+    <div class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+    <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
+      <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff9b9b] to-[#ff0000] opacity-90" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)" />
+    </div>
+    <div class="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
+      <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff9b9b] to-[#ff0000] opacity-90" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)" />
+    </div>
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <p class="text-sm/6 text-gray-900">
+        <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next.
+      </p>
+      <a href="#" class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Register now <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="flex flex-1 justify-end">
+      <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]">
+        <span class="sr-only">Dismiss</span>
+        <XMarkIcon class="size-5 text-gray-900" aria-hidden="true" />
+      </button>
+    </div>
+  </div>
+<!-- Banner ENDS here -->
 
     <AuthenticatedLayout>
         <template #header>
@@ -37,37 +48,8 @@ const closeModal = () => {
                         Welcome, You're logged in.
                     </div>
                 </div>
-
-                <div class="pt-14 flex items-center justify-center">
-                    <!-- Button to open the modal -->
-                    <button @click="openModal" class="px-4 py-2 bg-purple-900 text-white rounded hover:bg-purple-800">
-                        Open Modal
-                    </button>
-
-                    <!-- Modal Dialog -->
-                    <Dialog :open="isOpen" @close="closeModal"
-                        class="fixed inset-0 flex items-center justify-center z-50">
-                        <div class="fixed inset-0 bg-black bg-opacity-40"></div> <!-- Background overlay -->
-
-                        <div class="relative bg-white rounded-lg max-w-md mx-auto p-6">
-                            <DialogTitle class="text-xl font-bold mb-4">Modal Title</DialogTitle>
-                            <DialogDescription class="mb-4">
-                                This is a sample modal using Headless UI and Vue.js.
-                            </DialogDescription>
-
-                            <button @click="closeModal"
-                                class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 mr-3">
-                                Close Modal
-                            </button>
-                            <button @click=""
-                                class="px-4 py-2 bg-white text-black border border-gray-400 rounded hover:bg-gray-50 hover:border-gray-900">
-                                Cancel
-                            </button>
-                        </div>
-                    </Dialog>
-                </div>
-                
             </div>
+            
         </div>
     </AuthenticatedLayout>
 

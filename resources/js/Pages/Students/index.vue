@@ -5,6 +5,8 @@ import { Link, usePage, Head, useForm, router } from "@inertiajs/vue3";
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { ref, computed, watch } from "vue";
 import { useToast } from 'vue-toastification';
+import { Dialog, DialogTitle, DialogDescription } from '@headlessui/vue';
+
 
 defineProps({
     students: {
@@ -74,16 +76,14 @@ const deleteForm = useForm({});
 
 const deleteStudent = (studentId) => {
 
-    if (confirm("Are you sure you want to Delete this student?")) {
-        
+   if (confirm("Are you sure you want to Delete this student?")) {
+
         deleteForm.delete(route('students.destroy', studentId));
         toast.success('Student Deleted Successfully');
-        
-    }
+
+  }
 
 };
-
-
 
 </script>
 
@@ -92,7 +92,7 @@ const deleteStudent = (studentId) => {
 
     <Head>
         <title>Students List</title>
-        
+
     </Head>
 
 
@@ -137,16 +137,14 @@ const deleteStudent = (studentId) => {
                                 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-purple-600 sm:text-sm sm:leading-6" />
                         </div>
 
-                        <select 
-                        v-model="class_id"
-                        class="block rounded-lg border-0 py-2 ml-5 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400
-                        sm:text-sm sm:leading-6"
-                        >
-                    <option value="">Filter by Class</option>
-                    <option :value="item.id" :key="item.id" v-for="item in classes.data">{{ item.name }}</option>
-                    
+                        <select v-model="class_id" class="block rounded-lg border-0 py-2 ml-5 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400
+                        sm:text-sm sm:leading-6">
+                            <option value="">Filter by Class</option>
+                            <option :value="item.id" :key="item.id" v-for="item in classes.data">{{ item.name }}
+                            </option>
 
-                    </select>
+
+                        </select>
 
                     </div>
 
@@ -212,26 +210,25 @@ const deleteStudent = (studentId) => {
                                                 </td>
 
 
-                                                <td
-                                                    class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">
+                                                <td class="px-3 py-3.5 text-left text-sm font-medium text-gray-900">
 
+                                                    <Link :href="route('students.edit', student.id)" class="text-purple-950 hover:text-red-500 hover:font-semibold border border-purple-200 
+                                                        pl-2 pr-2 pt-1 pb-1 rounded hover:border-red-500"> Edit </Link>
 
-
-                                                    <Link :href="route('students.edit', student.id)"
-                                                        class="text-purple-950 hover:text-red-500 hover:font-semibold border border-purple-200 pl-2 pr-2 pt-1 pb-1 rounded hover:border-red-500"> Edit </Link>
 
                                                     <button @click="deleteStudent(student.id)"
-                                                        class="ml-5 text-purple-950 hover:text-white hover:font-semibold border border-purple-200 pl-2 pr-2 pt-1 pb-1 rounded hover:border-red-500 hover:bg-red-500"> Delete
+                                                        class="ml-5 text-purple-950 hover:text-white hover:font-semibold border border-purple-200 
+                                                        pl-2 pr-2 pt-1 pb-1 rounded hover:border-red-500 hover:bg-red-500"> Delete
                                                     </button>
+
+                                                    
+
                                                 </td>
 
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div><br>
-
-
-
 
                                 <Pagination :data="students" :updatedPageNumber="updatedPageNumber" />
                             </div>
