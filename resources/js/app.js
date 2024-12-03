@@ -8,6 +8,8 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 import Toast from 'vue-toastification';
 import 'vue-toastification/dist/index.css';
 
+import Dialog from 'primevue/dialog';
+
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 

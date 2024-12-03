@@ -95,6 +95,8 @@ const deleteStudent = (studentId) => {
         
     </Head>
 
+
+
     <AuthenticatedLayout>
         <template>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
