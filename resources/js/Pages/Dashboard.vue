@@ -14,7 +14,7 @@ import Banner from '@/Components/Banner.vue';
 
 <Banner></Banner>
 
-  <!--  <AuthenticatedLayout>
+  <AuthenticatedLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Dashboard
@@ -31,9 +31,9 @@ import Banner from '@/Components/Banner.vue';
             </div>
             
         </div>
-    </AuthenticatedLayout>-->
+    </AuthenticatedLayout>
 
-
+<!--
 
 <aside id="separator-sidebar" class="fixed top-12 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
    <div class="h-full px-3 py-4 overflow-y-auto bg-purple-50 dark:bg-gray-800">
@@ -234,7 +234,7 @@ import Banner from '@/Components/Banner.vue';
    </div>
 </div>
 
-
+-->
 
 
 </template>
