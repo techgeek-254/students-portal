@@ -6,7 +6,7 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { ref, computed, watch } from "vue";
 import { useToast } from 'vue-toastification';
 import { Dialog, DialogTitle, DialogDescription } from '@headlessui/vue';
-
+import Banner from "@/Components/Banner.vue";
 
 defineProps({
     students: {
@@ -95,7 +95,7 @@ const deleteStudent = (studentId) => {
 
     </Head>
 
-
+    <Banner></Banner>
 
     <AuthenticatedLayout>
         <template>

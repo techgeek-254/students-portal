@@ -5,7 +5,7 @@ import { watch, ref } from 'vue';
 import axios from 'axios';
 import InputError from '@/Components/InputError.vue';
 import { useToast } from 'vue-toastification';
-
+import Banner from '@/Components/Banner.vue';
 
 defineProps({
     classes: {
@@ -51,7 +51,7 @@ const createStudent = () => {
 <template>
 
     <Head title="Create Student" />
-
+    <Banner></Banner>
     <AuthenticatedLayout>
         <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
