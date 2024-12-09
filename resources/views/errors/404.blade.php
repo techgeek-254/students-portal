@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
  </head>
  <body class="h-full">
  <main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8 ">
+
     <div class="text-center border border-gray-200 px-20 py-20 rounded-lg shadow-md hover:ring-red-200 hover:ring hover:cursor-not-allowed">
       <p class=" font-semibold text-purple-800 text-7xl">404</p>
       <h1 class="mt-4 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Page not found</h1>
