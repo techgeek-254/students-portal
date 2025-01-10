@@ -7,6 +7,7 @@ import { ref, computed, watch } from "vue";
 import { useToast } from 'vue-toastification';
 import { Dialog, DialogTitle, DialogDescription } from '@headlessui/vue';
 import Banner from "@/Components/Banner.vue";
+import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 
 defineProps({
     students: {
